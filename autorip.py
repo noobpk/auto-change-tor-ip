@@ -65,6 +65,11 @@ def osx():
 	      time.sleep(5)
 	      print("\033[1;32m[+] Successfully - Your IP has been Changed\033[1;37m")
 	print ("\033[1;31m[#] The loop has finished refreshing it\033[1;37m")
+	print ("\033[1;32m[+] Stop service Tor\033[1;37m")
+	os.system("brew services stop tor")
+	time.sleep(5)
+	print ("\033[1;32m[+] Stop service Privoxy\033[1;37m")
+	os.system("brew services stop privoxy")
 
 def runon_linux():
 
@@ -102,6 +107,11 @@ def linux():
 	      time.sleep(5)
 	      print("\033[1;32m[+] Successfully - Your IP has been Changed\033[1;37m")
 	print ("\033[1;31m[#] The loop has finished refreshing it\033[1;37m")
+	print ("\033[1;32m[+] Stop service Tor\033[1;37m")
+	os.system("service tor stop")
+	time.sleep(5)
+	print ("\033[1;32m[+] Stop service Privoxy\033[1;37m")
+	os.system("service privoxy stop")
 
 def main():
 	
