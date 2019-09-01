@@ -57,7 +57,7 @@ def osx():
 	time.sleep(5)
 	print ("\033[1;34m[!] Change your SOCKES to 127.0.0.1:9050\033[1;37m")
 	print ("\033[1;32m[+] Set time stamp\033[1;37m")
-	sec = int(input("[?] Time to auto change ip in second (default 600s):") or "600")
+	sec = int(input("[?] Time to auto change ip by second (default 600s):") or "600")
 	loop = int(input("[?] Number of loop (default 144):") or "144")
 	for i in range(loop):  
 	      time.sleep(sec)
@@ -94,7 +94,7 @@ def linux():
 	time.sleep(5)
 	print ("\033[1;34m[!] Change your SOCKES to 127.0.0.1:9050\033[1;37m")
 	print ("\033[1;32m[+] Set time stamp\033[1;37m")
-	sec = int(input("[?] Time to auto change ip in second (default 600s):") or "600")
+	sec = int(input("[?] Time to auto change ip by second (default 600s):") or "600")
 	loop = int(input("[?] Number of loop (default 144):") or "144")
 	for i in range(loop):  
 	      time.sleep(sec)
