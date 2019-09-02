@@ -45,9 +45,9 @@ def runon_osx():
 	else:
 		print ("\033[1;34m[!] Tor has been install\033[1;37m")
 		print ("\033[1;34m[!] Privoxy has been install\033[1;37m")
-		osx()
+		startservice_osx()
 
-def osx():
+def startservice_osx():
 
 	print ("\033[1;32m[+] Start service Tor\033[1;37m")
 	os.system("brew services start tor")
@@ -65,6 +65,10 @@ def osx():
 	      time.sleep(5)
 	      print("\033[1;32m[+] Successfully - Your IP has been Changed\033[1;37m")
 	print ("\033[1;31m[#] The loop has finished refreshing it\033[1;37m")
+	stopservice_osx()
+
+def stopservice_osx():
+
 	print ("\033[1;32m[+] Stop service Tor\033[1;37m")
 	os.system("brew services stop tor")
 	time.sleep(5)
@@ -87,9 +91,9 @@ def runon_linux():
 	else:
 		print ("\033[1;34m[!] Tor has been install\033[1;37m")
 		print ("\033[1;34m[!] Privoxy has been install\033[1;37m")
-		linux()
+		startservice_linux()
 
-def linux():
+def startservice_linux():
 
 	print ("\033[1;32m[+] Start service Tor\033[1;37m")
 	os.system("service tor start")
@@ -107,6 +111,10 @@ def linux():
 	      time.sleep(5)
 	      print("\033[1;32m[+] Successfully - Your IP has been Changed\033[1;37m")
 	print ("\033[1;31m[#] The loop has finished refreshing it\033[1;37m")
+	stopservice_linux()
+
+def stopservice_linux():
+
 	print ("\033[1;32m[+] Stop service Tor\033[1;37m")
 	os.system("service tor stop")
 	time.sleep(5)
@@ -114,14 +122,21 @@ def linux():
 	os.system("service privoxy stop")
 
 def main():
-	
-	detect_platform()
+
+	try:
+		detect_platform()
+		if (sys.platform == 'darwin'):
+			print ("\033[1;34m[*] Darwin - MAC OS-X\033[1;37m")
+			runon_osx()
+		if (sys.platform == 'linux') | (sys.platform == 'linux1') | (sys.platform == 'linux2'):
+			print ("\033[1;34m[*] Linux - KALI LINUX\033[1;37m")
+			runon_linux()
+	except KeyboardInterrupt:
+		print ("\033[1;31m[#] KeyboardInterrupt\033[1;37m")
 	if (sys.platform == 'darwin'):
-		print ("\033[1;34m[*] Darwin - MAC OS-X\033[1;37m")
-		runon_osx()
+		stopservice_osx()
 	if (sys.platform == 'linux') | (sys.platform == 'linux1') | (sys.platform == 'linux2'):
-		print ("\033[1;34m[*] Linux - KALI LINUX\033[1;37m")
-		runon_linux()
+		stopservice_linux()
 
 if __name__ == '__main__':
     main()
