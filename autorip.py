@@ -14,7 +14,7 @@ _|      _|    _|_|      _|_|    _|_|_|    _|_|_|    _|    _|
 ''')
 
 print ("\033[1;34m[*]___author___: @noobpk\033[1;37m")
-print ("\033[1;34m[*]___version___: 1.1.0\033[1;37m")
+print ("\033[1;34m[*]___version___: 1.1.1\033[1;37m")
 print ("")
 
 def detect_platform():
@@ -91,10 +91,15 @@ def check_runon_linux():
 
 	print ("\033[1;32m[+] Check Requirement\033[1;37m")
 	istor = os.system('command -v tor 1> /dev/null')
+	istorsocks = os.system('command -v torsocks 1> /dev/null')
 	isprivoxy = os.system('command -v privoxy 1> /dev/null')
 	if (istor != 0):
 		print ("\033[1;32m[+] Installing Tor\033[1;37m")
 		os.system('apt-get install tor')
+		check_runon_linux()
+	if (istorsocks != 0):
+		print ("\033[1;32m[+] Installing TorSocks\033[1;37m")
+		os.system('apt-get install torsocks')
 		check_runon_linux()
 	if (isprivoxy != 0):
 		print ("\033[1;32m[+] Installing Privoxy\033[1;37m")
@@ -102,11 +107,14 @@ def check_runon_linux():
 		check_runon_linux()
 	else:
 		print ("\033[1;34m[!] Tor has been install\033[1;37m")
+		print ("\033[1;34m[!] TorSocks has been install\033[1;37m")
 		print ("\033[1;34m[!] Privoxy has been install\033[1;37m")
 		startservice_linux()
 
 def startservice_linux():
 
+	print ("\033[1;34m[!] Current IP Addresss\033[1;37m")
+	currentip = os.system("wget -qO- http://ipecho.net/plain 2> /dev/null ; echo")
 	print ("\033[1;32m[+] Start service Tor\033[1;37m")
 	os.system("service tor start")
 	time.sleep(5)
@@ -117,11 +125,14 @@ def startservice_linux():
 	print ("\033[1;32m[+] Set time stamp\033[1;37m")
 	sec = int(input("[?] Time to auto change ip by second (default 600s):") or "600")
 	loop = int(input("[?] Number of loop (default 144):") or "144")
-	for i in range(loop):  
-		time.sleep(sec)
+	for i in range(loop):
+		print ("\033[1;32m[+] Change New IP\033[1;37m")  
 		os.system("service tor restart")
 		time.sleep(5)
 		print("\033[1;32m[+] Successfully - Your IP has been Changed\033[1;37m")
+		print ("\033[1;34m[!] New IP Addresss:\033[1;37m")
+		currentip = os.system("torsocks wget -qO- http://ipecho.net/plain 2> /dev/null ; echo")
+		time.sleep(sec)
 	print ("\033[1;31m[#] The loop has finished refreshing it\033[1;37m")
 	stopservice_linux()
 
@@ -132,6 +143,7 @@ def stopservice_linux():
 	time.sleep(5)
 	print ("\033[1;32m[+] Stop service Privoxy\033[1;37m")
 	os.system("service privoxy stop")
+	os.system("clear")
 
 def main():
 
