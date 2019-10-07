@@ -153,7 +153,7 @@ def main():
 			print ("\033[1;34m[*] Darwin - MAC OS-X\033[1;37m")
 			check_runon_osx()
 		if (sys.platform == 'linux') | (sys.platform == 'linux1') | (sys.platform == 'linux2'):
-			print ("\033[1;34m[*] Linux - KALI LINUX\033[1;37m")
+			print ("\033[1;34m[*] Linux - KALI LINUX - UBUNTU\033[1;37m")
 			check_runon_linux()
 	except KeyboardInterrupt:
 		print ("\033[1;31m[#] KeyboardInterrupt\033[1;37m")

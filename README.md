@@ -1,7 +1,7 @@
 # Tool Auto change tor ip
 Automatically change ip address tor over time when accessing the internet. Make it private and safe for you.
 
-> Currently the tool is supported on MacOS and Kali Linux
+> Currently the tool is supported on MacOS and Kali Linux / Ubuntu
 
 # Usage
 1. Git clone https://github.com/noobpk/auto-change-tor-ip.git
