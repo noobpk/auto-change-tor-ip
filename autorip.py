@@ -21,7 +21,6 @@ print ("\033[1;34m[*]___author___: @noobpk\033[1;37m")
 print ("\033[1;34m[*]___version___: 1.2\033[1;37m")
 print ("")
 
-
 def detect_platform():
 	try:
 		platforms = {
@@ -92,7 +91,7 @@ def startservice_osx():
 		sec = int(input("[?] Time to auto change ip by second (default 600s):") or "600")
 		loop = int(input("[?] Number of loop (default 144):") or "144")
 		for i in range(loop):
-			logger.info("[*] Change New IP:")
+			logger.info("[*] Change New IP")
 			os.system("brew services restart tor")
 			time.sleep(2)
 			#currentip = os.system("torsocks wget -qO- http://ipecho.net/plain 2> /dev/null ; echo")
@@ -197,7 +196,7 @@ def startservice_linux():
 		sec = int(input("[?] Time to auto change ip by second (default 600s):") or "600")
 		loop = int(input("[?] Number of loop (default 144):") or "144")
 		for i in range(loop):
-			logger.info("[*] Change New IP:")  
+			logger.info("[*] Change New IP")  
 			os.system("service tor restart")
 			time.sleep(2)
 			# currentip = os.system("torsocks wget -qO- http://ipecho.net/plain 2> /dev/null ; echo")
