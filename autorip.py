@@ -8,13 +8,15 @@ import urllib.request
 from log import *
 
 print ('''\033[1;31m \n
-_|      _|                      _|                  _|      
-_|_|    _|    _|_|      _|_|    _|_|_|    _|_|_|    _|  _|  
-_|  _|  _|  _|    _|  _|    _|  _|    _|  _|    _|  _|_|    
-_|    _|_|  _|    _|  _|    _|  _|    _|  _|    _|  _|  _|  
-_|      _|    _|_|      _|_|    _|_|_|    _|_|_|    _|    _|
-        https://noobpk.github.io          _|                 
-    Automatically Change Ip Address Tor   _|    #noobteam
+              _             _       
+             | |           (_)      
+   __ _ _   _| |_ ___  _ __ _ _ __  
+  / _` | | | | __/ _ \| '__| | '_ \ 
+ | (_| | |_| | || (_) | |  | | |_) |
+  \__,_|\__,_|\__\___/|_|  |_| .__/ 
+                             | |    
+                             |_|    
+    Automatically Change Ip Address Tor  #noobteam
 ''')
 
 print ("\033[1;34m[*]___author___: @noobpk\033[1;37m")
