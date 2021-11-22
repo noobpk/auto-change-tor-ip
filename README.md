@@ -21,7 +21,9 @@ Automatically change tor ip address over time and using privoxy when accessing t
 1. Edit `/etc/proxychains.conf` at `[ProxyList]` add `socks4 127.0.0.1 9050`
 
 # Image
-<img width="878" alt="image" src="https://user-images.githubusercontent.com/31820707/64080213-dc93de00-cd1b-11e9-9501-1666c2d51e4a.png">
+<img width="664" alt="image" src="https://user-images.githubusercontent.com/31820707/142809533-8e1034ed-cde1-483f-a363-1749d9b6e755.png">
 
 # Demo
-https://youtu.be/m_q6HNt-X6E
+Basic usage: https://youtu.be/m_q6HNt-X6E
+
+With Proxychains: https://youtu.be/GauKYLUNiFc
