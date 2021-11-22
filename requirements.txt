@@ -1,0 +1,2 @@
+colorlog==4.0.2
+SocksiPy_branch==1.01

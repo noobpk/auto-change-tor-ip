@@ -16,7 +16,7 @@ print ('''\033[1;31m \n
   \__,_|\__,_|\__\___/|_|  |_| .__/ 
                              | |    
                              |_|    
-    Automatically Change Ip Address Tor  #noobteam
+    Automatically Change Tor Ip Address #noobteam
 ''')
 
 print ("\033[1;34m[*]___author___: @noobpk\033[1;37m")
