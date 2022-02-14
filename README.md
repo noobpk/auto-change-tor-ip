@@ -27,6 +27,6 @@ Automatically change tor ip address over time and using privoxy when accessing t
 <img width="664" alt="image" src="https://user-images.githubusercontent.com/31820707/142809533-8e1034ed-cde1-483f-a363-1749d9b6e755.png">
 
 # Demo
-Basic usage: https://youtu.be/m_q6HNt-X6E
-
-With Proxychains: https://youtu.be/GauKYLUNiFc
+|Name|Link|
+|----|----|
+|Demo 1 | https://youtu.be/GxnUKkYEHcw |
