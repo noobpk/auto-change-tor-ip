@@ -29,4 +29,4 @@ Automatically change tor ip address over time and using privoxy when accessing t
 # Demo
 |Name|Link|
 |----|----|
-|Demo 1 | https://youtu.be/GxnUKkYEHcw |
+|Automation change tor ip address &#124; Basic Usage &#124; Tor - Privoxy - Bypass Firewall  Block Ip| https://youtu.be/GxnUKkYEHcw |
