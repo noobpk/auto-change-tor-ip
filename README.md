@@ -4,7 +4,8 @@ Automatically change tor ip address over time and using privoxy when accessing t
 > Currently the tool is supported on MacOS and Kali Linux / Ubuntu (No support for Linux versions installed through the Microsoft Store)
 
 # Architecture
-<img width="869" alt="image" src="https://user-images.githubusercontent.com/31820707/142816893-8cbdf678-8bd7-4ecd-a639-3bc741b872e7.png">
+![image](https://user-images.githubusercontent.com/31820707/189964620-7062c280-7011-4b13-84a5-bf676e721d25.png)
+
 
 # PreConfig for Privoxy
 1. Linux - Edit `/etc/privoxy/config` 
