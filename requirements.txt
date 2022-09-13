@@ -1,2 +1,3 @@
 colorlog==4.0.2
 SocksiPy_branch==1.01
+gevent==21.12.0
