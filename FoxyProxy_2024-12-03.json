@@ -1,0 +1,38 @@
+{
+  "mode": "127.0.0.1:8118",
+  "sync": false,
+  "autoBackup": false,
+  "passthrough": "",
+  "theme": "",
+  "container": {
+    "incognito": "",
+    "container-1": "",
+    "container-2": "",
+    "container-3": "",
+    "container-4": ""
+  },
+  "commands": {
+    "setProxy": "",
+    "setTabProxy": "",
+    "quickAdd": ""
+  },
+  "data": [
+    {
+      "active": true,
+      "title": "Autorip-Privoxy",
+      "type": "http",
+      "hostname": "127.0.0.1",
+      "port": "8118",
+      "username": "",
+      "password": "",
+      "cc": "",
+      "city": "",
+      "color": "#ff00ff",
+      "pac": "",
+      "pacString": "",
+      "proxyDNS": true,
+      "include": [],
+      "exclude": []
+    }
+  ]
+}

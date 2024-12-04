@@ -16,13 +16,20 @@ Automatically change tor ip address over time and using privoxy when accessing t
     - Find & Set `enable-remote-toggle 1`
     - Find & Set `enable-edit-actions 1`
     - Find & Remove `#` in `forward-socks5t   /               127.0.0.1:9050 .`
+    
+For example privoxy config `privoxy.config`
+
+# PreConfig for FoxyProxy Extension
+- Install FoxyProxy Extension then import `FoxyProxy_2024-12-03.json`
 
 # Usage
-1. Git clone https://github.com/noobpk/auto-change-tor-ip.git
+1. git clone https://github.com/noobpk/auto-change-tor-ip.git
 1. cd auto-change-tor-ip/
+1. pip install -r requirements.txt
 1. python3 autorip.py
-1. set time and loop
-1. add HTTP Proxy 127.0.0.1:8118 into browser or network
+1. Set time and loop for autorip
+1. On your browsers -> open FoxyProxy -> turn on `Autorip-Privoxy` or add HTTP Proxy 127.0.0.1:8118 to network configuration.
+1. Now you can access http://p.p/
 
 <!-- # Configure burp suite walk through browser
 1. add socket 127.0.0.1:9050 into Network setting -> SOCKS Host in browser
